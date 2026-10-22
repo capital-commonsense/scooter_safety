@@ -9,7 +9,7 @@ so the methodology can be checked rather than taken on faith.
 ![Quarterly scooter-rider crash involvements by severity](output/quarterly_injuries_by_severity.png)
 
 This chart (and the data behind it) supports a post on the *[Capital
-Commonsense](https://capitalcommonsense.substack.com/p/capital-commonsense)* Substack. This repo
+Commonsense](https://capitalcommonsense.com/p/dcs-electric-scooters-could-be-getting)* Substack. This repo
 is the "show your work" -- everything here is meant to be reproducible by a
 third party from public data.
 
@@ -18,8 +18,8 @@ third party from public data.
 Requires [uv](https://docs.astral.sh/uv/).
 
 ```bash
-git clone <this-repo-url>
-cd capital_commonsense_escooter_safety
+git clone https://github.com/capital-commonsense/scooter_safety.git
+cd scooter_safety
 uv sync
 
 uv run fetch-crash-data   # ~1-5 min: pulls DC's live crash-detail table (~900k rows) into data/raw/
@@ -101,4 +101,4 @@ uv run pytest -m live       # hits DDOT's real ArcGIS endpoints, read-only, a
 
 Code: MIT, see `LICENSE`. Underlying data is public government data from
 the District of Columbia (DDOT/MPD) and from Ride Report's public dashboard;
-see `data/reference/SOURCES.md` for terms where noted.
+see `data/reference/SOURCES.md` for provenance.
